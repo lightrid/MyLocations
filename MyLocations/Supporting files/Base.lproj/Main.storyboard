@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s7O-M4-496">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second-->
+        <scene sceneID="2hd-TQ-rIH">
+            <objects>
+                <viewController id="IKM-O3-5yn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TuR-Eb-aPj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="V7k-AP-gqX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" id="7lk-9D-Mz1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oix-68-YMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157" y="214"/>
+        </scene>
+        <!--First-->
+        <scene sceneID="1ra-Ph-h1M">
+            <objects>
+                <viewController id="HgZ-HZ-AiS" customClass="CurrentLocationViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JEq-Zh-Z6P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="KNN-ee-Vb3">
+                                <rect key="frame" x="16" y="84.5" width="288" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Igj-p1-UkO">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ec1-gX-vWY">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Latitude goes here)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rt-4v-Mqm">
+                                                <rect key="frame" x="95" y="0.0" width="193" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="U3Y-AU-JD4">
+                                        <rect key="frame" x="0.0" y="39.5" width="288" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xo-d3-ta2">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Longitude goes here)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZ9-mw-06o">
+                                                <rect key="frame" x="98" y="0.0" width="190" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Adress goes her)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hc-EN-b0R">
+                                <rect key="frame" x="16" y="192.5" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laO-XK-F1F">
+                                <rect key="frame" x="116" y="277" width="88" height="30"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.66274509800000003" blue="0.99999129769999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tag Location"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHT-R3-5bt">
+                                <rect key="frame" x="104" y="453" width="112" height="30"/>
+                                <state key="normal" title="Get My Location"/>
+                                <connections>
+                                    <action selector="getLocation" destination="HgZ-HZ-AiS" eventType="touchUpInside" id="290-68-8zO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Message Label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8J-xQ-d80">
+                                <rect key="frame" x="16" y="16" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GLU-SH-S8K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y8J-xQ-d80" firstAttribute="top" secondItem="GLU-SH-S8K" secondAttribute="top" constant="16" id="3v0-Fd-LW4"/>
+                            <constraint firstItem="KNN-ee-Vb3" firstAttribute="top" secondItem="y8J-xQ-d80" secondAttribute="bottom" constant="48" id="6Km-rh-ttc"/>
+                            <constraint firstItem="laO-XK-F1F" firstAttribute="top" secondItem="4hc-EN-b0R" secondAttribute="bottom" constant="64" id="9il-Ol-OTa"/>
+                            <constraint firstItem="fHT-R3-5bt" firstAttribute="leading" secondItem="GLU-SH-S8K" secondAttribute="leading" constant="104" id="Dis-80-ZDV"/>
+                            <constraint firstItem="GLU-SH-S8K" firstAttribute="trailing" secondItem="fHT-R3-5bt" secondAttribute="trailing" constant="104" id="GEO-Jk-TRR"/>
+                            <constraint firstItem="KNN-ee-Vb3" firstAttribute="leading" secondItem="GLU-SH-S8K" secondAttribute="leading" constant="16" id="LnZ-Tv-RVT"/>
+                            <constraint firstItem="y8J-xQ-d80" firstAttribute="leading" secondItem="GLU-SH-S8K" secondAttribute="leading" constant="16" id="RXo-c3-gjI"/>
+                            <constraint firstItem="GLU-SH-S8K" firstAttribute="bottom" secondItem="fHT-R3-5bt" secondAttribute="bottom" constant="36" id="SvU-8g-hqQ"/>
+                            <constraint firstItem="4hc-EN-b0R" firstAttribute="leading" secondItem="GLU-SH-S8K" secondAttribute="leading" constant="16" id="TJD-rG-wqQ"/>
+                            <constraint firstItem="GLU-SH-S8K" firstAttribute="trailing" secondItem="y8J-xQ-d80" secondAttribute="trailing" constant="16" id="Y7R-j0-1ze"/>
+                            <constraint firstItem="4hc-EN-b0R" firstAttribute="top" secondItem="KNN-ee-Vb3" secondAttribute="bottom" constant="48" id="ZwR-Zc-520"/>
+                            <constraint firstItem="GLU-SH-S8K" firstAttribute="trailing" secondItem="laO-XK-F1F" secondAttribute="trailing" constant="116" id="aq1-La-uHJ"/>
+                            <constraint firstItem="GLU-SH-S8K" firstAttribute="trailing" secondItem="KNN-ee-Vb3" secondAttribute="trailing" constant="16" id="cGZ-pM-ALm"/>
+                            <constraint firstItem="GLU-SH-S8K" firstAttribute="trailing" secondItem="4hc-EN-b0R" secondAttribute="trailing" constant="16" id="rx3-Bc-0RC"/>
+                            <constraint firstItem="laO-XK-F1F" firstAttribute="leading" secondItem="GLU-SH-S8K" secondAttribute="leading" constant="116" id="xfy-JS-6fN"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" id="XT4-AN-Iew"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="4hc-EN-b0R" id="mRq-ok-fCg"/>
+                        <outlet property="getButton" destination="fHT-R3-5bt" id="Yv0-8I-nHm"/>
+                        <outlet property="latitudeLabel" destination="5Rt-4v-Mqm" id="mb9-vx-XJI"/>
+                        <outlet property="longitudeLabel" destination="xZ9-mw-06o" id="TQA-qs-1cK"/>
+                        <outlet property="messageLabel" destination="y8J-xQ-d80" id="Z56-4V-teu"/>
+                        <outlet property="tagButton" destination="laO-XK-F1F" id="usw-ie-wff"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gN-f5-jjv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157" y="-393"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tU7-Ry-Y28">
+            <objects>
+                <tabBarController id="s7O-M4-496" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P3P-He-Uwx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HgZ-HZ-AiS" kind="relationship" relationship="viewControllers" id="WdC-YA-mdA"/>
+                        <segue destination="IKM-O3-5yn" kind="relationship" relationship="viewControllers" id="bhP-to-sdw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ocj-I1-wfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-734" y="-89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
