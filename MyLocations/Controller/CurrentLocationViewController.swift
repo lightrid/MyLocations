@@ -64,12 +64,21 @@ class CurrentLocationViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLabels()
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
     func updateLabels() {
         if let location = location {
             latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
@@ -180,15 +189,23 @@ class CurrentLocationViewController: UIViewController {
         
         present(alert, animated: true, completion: .none)
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    // MARK: - Navigation
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard segue.identifier == "TagLocation" else {
+            return
+        }
+        guard let controller = segue.destination as? LocationDetailsViewController else {
+            return
+        }
+        controller.coordinate = location!.coordinate
+        controller.placemark = placemark
+        
+    }
+    
     
 }
 

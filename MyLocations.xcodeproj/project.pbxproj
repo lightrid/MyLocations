@@ -13,6 +13,10 @@
 		B70307732657FFC700C7C83D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B70307722657FFC700C7C83D /* Assets.xcassets */; };
 		B70307762657FFC700C7C83D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70307742657FFC700C7C83D /* LaunchScreen.storyboard */; };
 		B703078526580B7600C7C83D /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B703078426580B7600C7C83D /* CurrentLocationViewController.swift */; };
+		B7071AAD265BB848006F5189 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7071AAC265BB848006F5189 /* CategoryPickerViewController.swift */; };
+		B7071AB2265C0C22006F5189 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7071AB1265C0C22006F5189 /* HudView.swift */; };
+		B7071AB5265C28CA006F5189 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7071AB4265C28C9006F5189 /* Functions.swift */; };
+		B7461DF32659AA0C001EAE14 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7461DF22659AA0C001EAE14 /* LocationDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		B70307752657FFC700C7C83D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B70307772657FFC700C7C83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B703078426580B7600C7C83D /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
+		B7071AAC265BB848006F5189 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
+		B7071AB1265C0C22006F5189 /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		B7071AB4265C28C9006F5189 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		B7461DF22659AA0C001EAE14 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,7 @@
 		B703077F26580AF500C7C83D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B7071AB1265C0C22006F5189 /* HudView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -82,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				B703078426580B7600C7C83D /* CurrentLocationViewController.swift */,
+				B7461DF22659AA0C001EAE14 /* LocationDetailsViewController.swift */,
+				B7071AAC265BB848006F5189 /* CategoryPickerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -95,6 +106,7 @@
 				B70307722657FFC700C7C83D /* Assets.xcassets */,
 				B70307742657FFC700C7C83D /* LaunchScreen.storyboard */,
 				B70307772657FFC700C7C83D /* Info.plist */,
+				B7071AB4265C28C9006F5189 /* Functions.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -169,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7461DF32659AA0C001EAE14 /* LocationDetailsViewController.swift in Sources */,
 				B703076A2657FFC300C7C83D /* AppDelegate.swift in Sources */,
+				B7071AB2265C0C22006F5189 /* HudView.swift in Sources */,
+				B7071AB5265C28CA006F5189 /* Functions.swift in Sources */,
 				B703078526580B7600C7C83D /* CurrentLocationViewController.swift in Sources */,
+				B7071AAD265BB848006F5189 /* CategoryPickerViewController.swift in Sources */,
 				B703076C2657FFC300C7C83D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -303,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
