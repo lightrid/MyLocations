@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 private let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -29,16 +30,34 @@ class LocationDetailsViewController: UITableViewController {
     var placemark: CLPlacemark?
     var categoryName = "No Category"
     
+    var date = Date()
+    var managedObjectContext: NSManagedObjectContext!
     
     // MARK:- Actions
     @IBAction func done() {
         let hudView = HudView.hud(inView: navigationController!.view, animated: true)
         hudView.text = "Tagged"
-    
-        afterDelay(0.6) {
-            hudView.hide()
-            self.navigationController?.popViewController(animated: true)
+        
+        let location = Location(context: managedObjectContext)
+        
+        location.locationDescrition = descriptionTextView.text
+        location.category = categoryName
+        location.latitude = coordinate.latitude
+        location.longitude = coordinate.longitude
+        location.date = date
+        location.placemark = placemark
+        
+        do {
+            try managedObjectContext.save()
+            afterDelay(0.6) {
+                hudView.hide()
+                self.navigationController?.popViewController(animated: true)
+            }
+        } catch {
+            fatalCoreDataError(error)
         }
+        
+        
     }
     
     @IBAction func cancel() {
@@ -82,7 +101,7 @@ class LocationDetailsViewController: UITableViewController {
             addressLabel.text = "No Address Found"
         }
         
-        dateLabel.text = format(date: Date())
+        dateLabel.text = format(date: date)
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeybord))
         gestureRecognizer.cancelsTouchesInView = false
@@ -105,10 +124,10 @@ class LocationDetailsViewController: UITableViewController {
     }
     
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "PickCategory" else {
             return
         }
@@ -118,32 +137,32 @@ class LocationDetailsViewController: UITableViewController {
         }
         
         controller.selectedCategoryName = categoryName
-     }
+    }
     
-     
+    
     // MARK:- Helper Methods
     func string(from placemark: CLPlacemark) -> String {
-      var text = ""
-
-      if let s = placemark.subThoroughfare {
-        text += s + " "
-      }
-      if let s = placemark.thoroughfare {
-        text += s + ", "
-      }
-      if let s = placemark.locality {
-        text += s + ", "
-      }
-      if let s = placemark.administrativeArea {
-        text += s + " "
-      }
-      if let s = placemark.postalCode {
-        text += s + ", "
-      }
-      if let s = placemark.country {
-        text += s
-      }
-      return text
+        var text = ""
+        
+        if let s = placemark.subThoroughfare {
+            text += s + " "
+        }
+        if let s = placemark.thoroughfare {
+            text += s + ", "
+        }
+        if let s = placemark.locality {
+            text += s + ", "
+        }
+        if let s = placemark.administrativeArea {
+            text += s + " "
+        }
+        if let s = placemark.postalCode {
+            text += s + ", "
+        }
+        if let s = placemark.country {
+            text += s
+        }
+        return text
     }
     
     func format(date: Date) -> String {
