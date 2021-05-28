@@ -24,7 +24,7 @@ class CategoryPickerViewController: UITableViewController {
         "Landmark",
         "Park"
     ]
-
+    
     var selectedIndexPath = IndexPath()
     
     override func viewDidLoad() {
@@ -36,13 +36,13 @@ class CategoryPickerViewController: UITableViewController {
             }
         }
     }
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return categories.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
@@ -53,6 +53,10 @@ class CategoryPickerViewController: UITableViewController {
         } else {
             cell.accessoryType = .none
         }
+        let selection = UIView(frame: CGRect.zero)
+        selection.backgroundColor = UIColor(white: 1.0, alpha: 0.3)
+        cell.selectedBackgroundView = selection
+        
         return cell
     }
     

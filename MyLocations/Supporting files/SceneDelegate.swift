@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        //self.window = UIWindow(windowScene: windowScene)
+        customizeAppearance()
         if let tabController = window?.rootViewController
             as? UITabBarController {
             
@@ -52,7 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 controller3.managedObjectContext = managedObjectContext
             }
         }
-       listenForFatalCoreDataNotifications()
+        listenForFatalCoreDataNotifications()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -111,6 +111,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 tabController.present(alert, animated: true,
                                       completion: nil)
             })
+    }
+    
+    func customizeAppearance() {
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor:
+                UIColor.white ]
+        
+        UITabBar.appearance().barTintColor = UIColor.black
+        
+        let tintColor = UIColor(red: 255/255.0, green: 238/255.0,
+                                blue: 136/255.0, alpha: 1.0)
+        UITabBar.appearance().tintColor = tintColor
     }
 }
 
